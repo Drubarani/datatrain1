@@ -54,3 +54,21 @@ plt.figure(figsize=(7,4))
 sns.heatmap(correlation,annot=True,cmap='coolwarm',fmt=".2f")
 plt.title('Correlation Heatmap')
 plt.show()
+
+plt.figure(figsize=(7,4))
+plt.scatter(df['Age'],df['Spending'],color='red',alpha=0.5)
+plt.title('Age vs Spending')
+plt.xlabel('Age')
+plt.ylabel('Spending')
+plt.show()
+
+plt.figure(figsize=(7,4))
+sns.boxplot(x=df['Age'],color='lightgreen')
+plt.title("Boxplot of Customer Age")
+plt.xlabel('Age')
+plt.show()
+
+print("Find the outlier in age")
+outliers=df[df['Age']>100]
+print("Found outliers(s)")
+print(outliers)
